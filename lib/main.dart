@@ -11,55 +11,33 @@ class XylophoneApp extends StatelessWidget {
     player.play('note$number.wav');
   }
 
+  // TODO : Update method
+  void buildKey(){
+    Expanded(
+      child: FlatButton(
+        onPressed:() {
+          playSound(1);
+        },
+        color: Colors.red,
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              FlatButton(
-                onPressed:() {
-                  playSound(1);
-                },
-                color: Colors.red,
-              ),
-              FlatButton(
-                onPressed:() {
-                  playSound(2);
-                },
-                color: Colors.orange,
-              ),
-              FlatButton(
-                onPressed:() {
-                  playSound(3);
-                },
-                color: Colors.yellow,
-              ),
-              FlatButton(
-                onPressed:() {
-                  playSound(4);
-                },
-                color: Colors.green,
-              ),
-              FlatButton(
-                onPressed:() {
-                  playSound(5);
-                },
-                color: Colors.green.shade900,
-              ),
-              FlatButton(
-                onPressed:() {
-                  playSound(6);
-                },
-                color: Colors.blue,
-              ),
-              FlatButton(
-                onPressed:() {
-                  playSound(7);
-                },
-                color: Colors.deepPurple,
-              ),
+              // buildKey(),
+              // buildKey(),
+              // buildKey(),
+              // buildKey(),
+              // buildKey(),
+              // buildKey(),
+              // buildKey(),
             ],
           ),
         ),
